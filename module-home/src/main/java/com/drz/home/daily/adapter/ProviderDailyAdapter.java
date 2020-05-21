@@ -1,7 +1,7 @@
 package com.drz.home.daily.adapter;
 
 import com.chad.library.adapter.base.BaseProviderMultiAdapter;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.home.nominate.adapter.provider.FollowCardProvider;
 import com.drz.home.nominate.adapter.provider.NominateItemType;
 import com.drz.home.nominate.adapter.provider.SingleTitleProvider;

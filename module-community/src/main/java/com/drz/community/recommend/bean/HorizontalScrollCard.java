@@ -1,6 +1,6 @@
 package com.drz.community.recommend.bean;
 
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.util.List;
 

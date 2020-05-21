@@ -1,6 +1,6 @@
 package com.drz.home.discover.bean;
 
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.io.Serializable;
 import java.util.List;

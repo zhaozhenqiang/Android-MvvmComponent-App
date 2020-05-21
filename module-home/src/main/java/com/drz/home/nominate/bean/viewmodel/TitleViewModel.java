@@ -1,7 +1,7 @@
 package com.drz.home.nominate.bean.viewmodel;
 
 
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 /**
  * 应用模块:

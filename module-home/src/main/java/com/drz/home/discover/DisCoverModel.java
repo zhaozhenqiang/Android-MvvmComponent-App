@@ -7,9 +7,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.drz.base.model.BaseModel;
-import com.drz.base.utils.GsonUtils;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.model.BaseModel;
+import com.fhzn.common.utils.GsonUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.home.discover.bean.BannerBean;
 import com.drz.home.discover.bean.BriefCard;
 import com.drz.home.discover.bean.CategoryCardBean;
@@ -22,9 +22,9 @@ import com.drz.home.discover.bean.viewmodel.TopBannerViewModel;
 import com.drz.home.nominate.bean.VideoSmallCardBean;
 import com.drz.home.nominate.bean.viewmodel.TitleViewModel;
 import com.drz.home.nominate.bean.viewmodel.VideoCardViewModel;
-import com.zhouyou.http.EasyHttp;
-import com.zhouyou.http.callback.SimpleCallBack;
-import com.zhouyou.http.exception.ApiException;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.callback.SimpleCallBack;
+import com.fhzn.common.net.exception.ApiException;
 
 import io.reactivex.disposables.Disposable;
 

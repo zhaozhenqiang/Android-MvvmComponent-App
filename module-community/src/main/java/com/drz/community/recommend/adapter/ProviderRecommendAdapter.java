@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.jetbrains.annotations.NotNull;
 import com.chad.library.adapter.base.BaseProviderMultiAdapter;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.community.recommend.adapter.provider.CommunityCardProvider;
 import com.drz.community.recommend.adapter.provider.IRecommendItemType;
 import com.drz.community.recommend.adapter.provider.SquareCardProvider;

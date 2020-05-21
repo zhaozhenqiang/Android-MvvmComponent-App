@@ -1,7 +1,7 @@
 package com.drz.home.daily;
 
-import com.drz.base.activity.IBasePagingView;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.activity.IBasePagingView;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.util.ArrayList;
 

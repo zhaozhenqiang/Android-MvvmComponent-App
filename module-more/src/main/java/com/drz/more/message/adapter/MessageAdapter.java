@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.more.R;
 import com.drz.more.databinding.MoreItemMessageViewBinding;
 import com.drz.more.message.bean.MessageViewModel;

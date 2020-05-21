@@ -3,9 +3,9 @@ package com.drz.more;
 import java.util.ArrayList;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.base.viewmodel.IMvvmBaseViewModel;
-import com.drz.common.router.RouterFragmentPath;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.router.RouterFragmentPath;
 import com.drz.more.adapter.MoreFragmentPageAdapter;
 import com.drz.more.databinding.MoreFragmentMoreBinding;
 import com.drz.more.message.MessageFragment;

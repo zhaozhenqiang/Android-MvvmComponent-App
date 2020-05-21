@@ -6,11 +6,10 @@ import org.jetbrains.annotations.Nullable;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.base.livedatabus.LiveDatabus;
-import com.drz.common.contract.BaseCustomViewModel;
-import com.drz.common.contract.VideoHeaderBean;
-import com.drz.common.router.RouterActivityPath;
-import com.drz.common.utils.DateTimeUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.VideoHeaderBean;
+import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.common.utils.DateTimeUtils;
 import com.drz.community.attention.bean.AttentionCardViewModel;
 import com.drz.community.databinding.CommunityItemAttentionCardViewBinding;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
@@ -18,7 +17,6 @@ import com.shuyu.gsyvideoplayer.builder.GSYVideoOptionBuilder;
 import com.shuyu.gsyvideoplayer.listener.GSYSampleCallBack;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.view.View;
 
 import androidx.databinding.DataBindingUtil;

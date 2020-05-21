@@ -1,7 +1,7 @@
 package com.drz.home.discover;
 
-import com.drz.base.activity.IBaseView;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.activity.IBaseView;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.util.ArrayList;
 

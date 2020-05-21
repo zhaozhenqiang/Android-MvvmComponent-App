@@ -2,7 +2,7 @@ package com.drz.more.themes;
 
 import java.util.ArrayList;
 
-import com.drz.base.activity.IBaseView;
+import com.fhzn.common.activity.IBaseView;
 import com.drz.more.themes.bean.Tabs;
 
 /**

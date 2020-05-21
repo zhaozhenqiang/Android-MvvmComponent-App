@@ -35,7 +35,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <com.drz.common.views.CommonCustomTextView
+            <com.fhzn.common.views.CommonCustomTextView
                 android:id="@+id/tv_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
                 android:text="@{viewModel.data.title}"
                 tools:text="主题创作广场" />
 
-            <com.drz.common.views.CommonCustomTextView
+            <com.fhzn.common.views.CommonCustomTextView
                 android:id="@+id/tv_subtitle"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"

@@ -4,10 +4,10 @@ import android.content.Context;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.drz.common.contract.UserInfo;
-import com.drz.common.router.RouterActivityPath;
-import com.drz.common.services.ILoginService;
-import com.drz.common.services.config.ServicesConfig;
+import com.fhzn.common.contract.UserInfo;
+import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.common.services.ILoginService;
+import com.fhzn.common.services.config.ServicesConfig;
 
 /**
  * 应用模块:

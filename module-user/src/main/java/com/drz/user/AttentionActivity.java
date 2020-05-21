@@ -6,7 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.drz.common.router.RouterActivityPath;
+import com.fhzn.common.router.RouterActivityPath;
 
 /**
  * 应用模块:

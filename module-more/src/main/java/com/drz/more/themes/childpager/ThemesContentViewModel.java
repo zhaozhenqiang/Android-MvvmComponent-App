@@ -1,9 +1,9 @@
 package com.drz.more.themes.childpager;
 
-import com.drz.base.model.BasePagingModel;
-import com.drz.base.model.IPagingModelListener;
-import com.drz.base.viewmodel.MvmBaseViewModel;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.model.BasePagingModel;
+import com.fhzn.common.model.IPagingModelListener;
+import com.fhzn.common.viewmodel.MvmBaseViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.util.ArrayList;
 

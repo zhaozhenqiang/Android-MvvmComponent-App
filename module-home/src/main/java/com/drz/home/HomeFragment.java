@@ -6,10 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.base.viewmodel.IMvvmBaseViewModel;
-import com.drz.common.router.RouterFragmentPath;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.router.RouterFragmentPath;
 import com.drz.home.databinding.HomeFragmentHomeBinding;
 import com.google.android.material.tabs.TabLayout;
 import com.drz.home.adapter.HomeFragmentPageAdapter;

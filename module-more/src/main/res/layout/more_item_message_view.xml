@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@drawable/common_tools_iv_bg" />
 
-        <com.drz.common.views.CommonCustomTextView
+        <com.fhzn.common.views.CommonCustomTextView
             android:id="@+id/customTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

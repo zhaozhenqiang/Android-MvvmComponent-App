@@ -14,9 +14,9 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.drz.base.fragment.MvvmBaseFragment;
-import com.drz.base.viewmodel.IMvvmBaseViewModel;
-import com.drz.common.router.RouterFragmentPath;
+import com.fhzn.common.fragment.MvvmBaseFragment;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.router.RouterFragmentPath;
 import com.drz.user.adapter.RecyclerAdapter;
 import com.drz.user.databinding.UserFragmentLayoutBinding;
 

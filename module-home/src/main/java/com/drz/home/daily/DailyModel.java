@@ -7,17 +7,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.drz.base.model.BasePagingModel;
-import com.drz.base.utils.GsonUtils;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.model.BasePagingModel;
+import com.fhzn.common.utils.GsonUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.home.nominate.bean.FollowCardBean;
 import com.drz.home.nominate.bean.TextCardBean;
 import com.drz.home.nominate.bean.viewmodel.FollowCardViewModel;
 import com.drz.home.nominate.bean.viewmodel.SingleTitleViewModel;
-import com.zhouyou.http.EasyHttp;
-import com.zhouyou.http.cache.model.CacheMode;
-import com.zhouyou.http.callback.SimpleCallBack;
-import com.zhouyou.http.exception.ApiException;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.cache.model.CacheMode;
+import com.fhzn.common.net.callback.SimpleCallBack;
+import com.fhzn.common.net.exception.ApiException;
 
 import android.text.TextUtils;
 

@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import com.blankj.utilcode.util.ScreenUtils;
 import com.chad.library.adapter.base.provider.BaseItemProvider;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.community.R;
 import com.drz.community.databinding.CommunityItemCommunityViewBinding;
 import com.drz.community.recommend.bean.viewmodel.CloumnsCardViewModel;

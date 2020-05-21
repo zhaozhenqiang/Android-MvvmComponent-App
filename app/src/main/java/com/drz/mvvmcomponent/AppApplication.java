@@ -1,7 +1,7 @@
 package com.drz.mvvmcomponent;
 
-import com.drz.base.base.BaseApplication;
-import com.drz.common.config.ModuleLifecycleConfig;
+import com.fhzn.common.base.BaseApplication;
+import com.fhzn.common.config.ModuleLifecycleConfig;
 
 /**
  * 应用模块: 宿主app

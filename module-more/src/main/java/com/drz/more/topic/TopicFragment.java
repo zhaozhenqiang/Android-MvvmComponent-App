@@ -2,8 +2,8 @@ package com.drz.more.topic;
 
 import java.util.List;
 
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.more.R;
 import com.drz.more.databinding.MoreFragmentTopicBinding;
 import com.drz.more.topic.adapter.TopicAdapter;

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="com.drz.common.utils.DateTimeUtils"/>
+        <import type="com.fhzn.common.utils.DateTimeUtils"/>
         <variable
             name="viewModel"
             type="com.drz.home.nominate.bean.viewmodel.FollowCardViewModel" />
@@ -26,7 +26,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@drawable/common_tools_iv_bg" />
 
-        <com.drz.common.views.CommonCustomTextView
+        <com.fhzn.common.views.CommonCustomTextView
             android:id="@+id/tv_video_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

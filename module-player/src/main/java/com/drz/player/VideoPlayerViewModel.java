@@ -1,9 +1,9 @@
 package com.drz.player;
 
-import com.drz.base.model.BaseModel;
-import com.drz.base.model.IModelListener;
-import com.drz.base.viewmodel.MvmBaseViewModel;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.model.BaseModel;
+import com.fhzn.common.model.IModelListener;
+import com.fhzn.common.viewmodel.MvmBaseViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 import java.util.ArrayList;
 

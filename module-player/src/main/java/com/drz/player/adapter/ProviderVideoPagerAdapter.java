@@ -5,7 +5,7 @@ import java.util.List;
 import org.jetbrains.annotations.NotNull;
 
 import com.chad.library.adapter.base.BaseProviderMultiAdapter;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.player.adapter.provider.IVideoItemType;
 import com.drz.player.adapter.provider.NominateViewProvider;
 import com.drz.player.adapter.provider.ReplyViewProvider;

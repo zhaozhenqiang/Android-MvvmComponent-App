@@ -1,7 +1,7 @@
 package com.drz.user;
 
-import com.drz.base.base.BaseApplication;
-import com.drz.common.IModuleInit;
+import com.fhzn.common.base.BaseApplication;
+import com.fhzn.common.IModuleInit;
 
 /**
  * 应用模块:

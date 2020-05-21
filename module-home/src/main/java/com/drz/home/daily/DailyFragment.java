@@ -2,8 +2,8 @@ package com.drz.home.daily;
 
 import java.util.ArrayList;
 
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.home.R;
 import com.drz.home.daily.adapter.ProviderDailyAdapter;
 import com.drz.home.databinding.HomeFragmentDailyBinding;

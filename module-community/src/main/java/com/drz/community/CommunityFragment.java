@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.base.viewmodel.IMvvmBaseViewModel;
-import com.drz.common.router.RouterFragmentPath;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.router.RouterFragmentPath;
 import com.drz.community.adapter.CommunityFragmentPageAdapter;
 import com.drz.community.attention.AttentionFragment;
 import com.drz.community.databinding.CommunityFragmentCommunityBinding;

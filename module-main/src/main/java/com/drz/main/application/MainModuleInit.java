@@ -1,19 +1,18 @@
 package com.drz.main.application;
 
 import com.blankj.utilcode.util.Utils;
-import com.drz.base.base.BaseApplication;
-import com.drz.base.loadsir.EmptyCallback;
-import com.drz.base.loadsir.ErrorCallback;
-import com.drz.base.loadsir.LoadingCallback;
-import com.drz.base.loadsir.TimeoutCallback;
-import com.drz.common.IModuleInit;
-import com.drz.common.adapter.ScreenAutoAdapter;
+import com.fhzn.common.base.BaseApplication;
+import com.fhzn.common.loadsir.EmptyCallback;
+import com.fhzn.common.loadsir.ErrorCallback;
+import com.fhzn.common.loadsir.LoadingCallback;
+import com.fhzn.common.loadsir.TimeoutCallback;
+import com.fhzn.common.IModuleInit;
+import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.kingja.loadsir.core.LoadSir;
-import com.limpoxe.support.servicemanager.ServiceManager;
 import com.orhanobut.logger.Logger;
-import com.zhouyou.http.EasyHttp;
-import com.zhouyou.http.cache.converter.GsonDiskConverter;
-import com.zhouyou.http.cache.model.CacheMode;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.cache.converter.GsonDiskConverter;
+import com.fhzn.common.net.cache.model.CacheMode;
 
 /**
  * 应用模块: main

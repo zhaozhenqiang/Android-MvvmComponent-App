@@ -2,8 +2,8 @@ package com.drz.more.themes.childpager;
 
 import java.util.ArrayList;
 
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.more.R;
 import com.drz.more.databinding.MoreFragmentThemesContentBinding;
 import com.drz.more.themes.childpager.adapter.ThemesContentAdapter;

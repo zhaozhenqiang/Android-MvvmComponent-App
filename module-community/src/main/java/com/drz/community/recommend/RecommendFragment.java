@@ -2,10 +2,10 @@ package com.drz.community.recommend;
 
 import java.util.ArrayList;
 
-import com.drz.base.fragment.MvvmLazyFragment;
-import com.drz.common.contract.BaseCustomViewModel;
-import com.drz.common.recyclerview.RecyclerItemDecoration;
-import com.drz.common.utils.DensityUtils;
+import com.fhzn.common.fragment.MvvmLazyFragment;
+import com.fhzn.common.contract.BaseCustomViewModel;
+import com.fhzn.common.recyclerview.RecyclerItemDecoration;
+import com.fhzn.common.utils.DensityUtils;
 import com.drz.community.R;
 import com.drz.community.databinding.CommunityFragmentRecommendBinding;
 import com.drz.community.recommend.adapter.ProviderRecommendAdapter;

@@ -6,9 +6,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import com.drz.base.model.BaseModel;
-import com.drz.base.utils.GsonUtils;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.model.BaseModel;
+import com.fhzn.common.utils.GsonUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.player.bean.LeftAlignTextHeader;
 import com.drz.player.bean.ReplyBean;
 import com.drz.player.bean.TextCard;
@@ -16,9 +16,9 @@ import com.drz.player.bean.VideoSmallCard;
 import com.drz.player.bean.viewmodel.ReplyViewModel;
 import com.drz.player.bean.viewmodel.VideoCardViewModel;
 import com.drz.player.bean.viewmodel.VideoTextViewModel;
-import com.zhouyou.http.EasyHttp;
-import com.zhouyou.http.exception.ApiException;
-import com.zhouyou.http.subsciber.BaseSubscriber;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.exception.ApiException;
+import com.fhzn.common.net.subsciber.BaseSubscriber;
 
 import io.reactivex.Observable;
 import io.reactivex.functions.BiFunction;

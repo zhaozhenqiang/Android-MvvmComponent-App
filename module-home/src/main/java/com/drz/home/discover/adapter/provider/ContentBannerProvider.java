@@ -5,7 +5,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.chad.library.adapter.base.provider.BaseItemProvider;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.contract.BaseCustomViewModel;
 import com.drz.home.R;
 import com.drz.home.databinding.HomeItemContentBannerViewBinding;
 import com.drz.home.discover.bean.viewmodel.ContentBannerViewModel;

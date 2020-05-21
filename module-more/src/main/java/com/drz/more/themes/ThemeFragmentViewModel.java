@@ -1,8 +1,8 @@
 package com.drz.more.themes;
 
-import com.drz.base.model.BaseModel;
-import com.drz.base.model.IModelListener;
-import com.drz.base.viewmodel.MvmBaseViewModel;
+import com.fhzn.common.model.BaseModel;
+import com.fhzn.common.model.IModelListener;
+import com.fhzn.common.viewmodel.MvmBaseViewModel;
 import com.drz.more.themes.bean.Tabs;
 
 import java.util.ArrayList;

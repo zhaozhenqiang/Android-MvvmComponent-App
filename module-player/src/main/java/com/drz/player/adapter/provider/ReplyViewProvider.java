@@ -5,8 +5,8 @@ import org.jetbrains.annotations.Nullable;
 
 import com.chad.library.adapter.base.provider.BaseItemProvider;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.common.contract.BaseCustomViewModel;
-import com.drz.common.utils.DateTimeUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
+import com.fhzn.common.utils.DateTimeUtils;
 import com.drz.player.R;
 import com.drz.player.bean.viewmodel.ReplyViewModel;
 import com.drz.player.databinding.PlayerItemReplyViewBinding;

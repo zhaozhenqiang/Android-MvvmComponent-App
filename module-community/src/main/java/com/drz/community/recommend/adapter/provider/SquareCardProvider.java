@@ -5,9 +5,9 @@ import org.jetbrains.annotations.Nullable;
 
 import com.chad.library.adapter.base.provider.BaseItemProvider;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.common.contract.BaseCustomViewModel;
-import com.drz.common.recyclerview.RecyclerItemDecoration;
-import com.drz.common.utils.DensityUtils;
+import com.fhzn.common.contract.BaseCustomViewModel;
+import com.fhzn.common.recyclerview.RecyclerItemDecoration;
+import com.fhzn.common.utils.DensityUtils;
 import com.drz.community.R;
 import com.drz.community.databinding.CommunityItemSquareCardViewBinding;
 import com.drz.community.recommend.adapter.SquareCardAdapter;

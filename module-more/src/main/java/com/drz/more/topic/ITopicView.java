@@ -2,8 +2,8 @@ package com.drz.more.topic;
 
 import java.util.List;
 
-import com.drz.base.activity.IBasePagingView;
-import com.drz.common.contract.BaseCustomViewModel;
+import com.fhzn.common.activity.IBasePagingView;
+import com.fhzn.common.contract.BaseCustomViewModel;
 
 /**
  * 应用模块:

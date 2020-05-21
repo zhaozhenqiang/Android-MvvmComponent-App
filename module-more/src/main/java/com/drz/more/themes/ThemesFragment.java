@@ -1,6 +1,6 @@
 package com.drz.more.themes;
 
-import com.drz.base.fragment.MvvmLazyFragment;
+import com.fhzn.common.fragment.MvvmLazyFragment;
 import com.drz.more.R;
 import com.drz.more.databinding.MoreFragmentThemesBinding;
 import com.drz.more.themes.adapter.ThemesFragmentPageAdapter;

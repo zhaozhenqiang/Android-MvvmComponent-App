@@ -1,6 +1,6 @@
 package com.drz.home.nominate.adapter.provider;
 
-import com.drz.common.adapter.CommonBindingAdapters;
+import com.fhzn.common.adapter.CommonBindingAdapters;
 import com.drz.home.R;
 import com.zhpan.bannerview.holder.ViewHolder;
 
