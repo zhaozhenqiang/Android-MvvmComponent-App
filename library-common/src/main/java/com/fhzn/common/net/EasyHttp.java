@@ -116,7 +116,7 @@ public final class EasyHttp {
         if(mCommonHeaders == null) {
             mCommonHeaders = new HttpHeaders();
         }
-        mCommonHeaders.put("content-type", "application/json");
+        mCommonHeaders.put("Content-Type", "application/json");
     }
 
     public static EasyHttp getInstance() {

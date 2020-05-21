@@ -70,7 +70,7 @@ public class TestActivity
         viewDataBinding.tvOldTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Disposable disposable = EasyHttp.get("http://baobab.kaiyanapp.com/api/v6/community/tab/follow")
+                Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/issue/getMainPageData")
                         .cacheKey(getClass().getSimpleName())
                         .execute(new SimpleCallBack<String>() {
                             @Override
@@ -95,7 +95,7 @@ public class TestActivity
                         .params("username", "wangdongfeng")
                         .params("password", "123456")
                         .removeAllHeaders()
-                        .headers("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8")
+                        .headers("Content-Type",  "application/json")
                         .cacheKey("https://ap2.fuxiang.site/mpapp/login2")
                         .execute(new SimpleCallBack<String>() {
                             @Override
