@@ -35,14 +35,14 @@ public class SplashActivity extends AppCompatActivity {
                 .titleBar(findViewById(R.id.top_view))
                 .hideBar(BarHide.FLAG_HIDE_NAVIGATION_BAR)
                 .init();
-        mHandler.postDelayed(this::startToMain, 3000);
+        mHandler.postDelayed(this::startToMain, 200);
     }
 
     private void startToMain() {
         if (MmkvHelper.getInstance().getMmkv().decodeBool("first",true)){
             startActivity(new Intent(this, GuideActivity.class));
         }else {
-            MainActivity.start(this);
+            TestActivity.start(this);
         }
 
     }

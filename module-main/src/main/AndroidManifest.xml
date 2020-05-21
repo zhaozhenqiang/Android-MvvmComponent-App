@@ -17,6 +17,7 @@
             android:screenOrientation="portrait"
             />
         <activity android:name=".ui.GuideActivity"/>
+        <activity android:name=".ui.TestActivity"/>
     </application>
 
 </manifest>
