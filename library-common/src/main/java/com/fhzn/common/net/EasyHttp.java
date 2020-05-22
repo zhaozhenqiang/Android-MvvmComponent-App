@@ -113,10 +113,6 @@ public final class EasyHttp {
         retrofitBuilder.addCallAdapterFactory(RxJava2CallAdapterFactory.create());//增加RxJava2CallAdapterFactory
         rxCacheBuilder = new RxCache.Builder().init(sContext)
                 .diskConverter(new SerializableDiskConverter());      //目前只支持Serializable和Gson缓存其它可以自己扩展
-        if(mCommonHeaders == null) {
-            mCommonHeaders = new HttpHeaders();
-        }
-        mCommonHeaders.put("Content-Type", "application/json");
     }
 
     public static EasyHttp getInstance() {

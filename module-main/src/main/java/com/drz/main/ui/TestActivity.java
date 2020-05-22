@@ -15,6 +15,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.LogUtils;
 import com.drz.main.R;
 import com.drz.main.adapter.MainPageAdapter;
+import com.drz.main.bean.LoginResponse;
 import com.drz.main.databinding.MainActivityMainBinding;
 import com.drz.main.databinding.MainActivityTestBinding;
 import com.drz.main.utils.ColorUtils;
@@ -26,10 +27,12 @@ import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.common.storage.MmkvHelper;
+import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.gyf.immersionbar.ImmersionBar;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import io.reactivex.disposables.Disposable;
@@ -45,6 +48,7 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
 public class TestActivity
         extends MvvmBaseActivity<MainActivityTestBinding, IMvvmBaseViewModel> {
 
+    LoginResponse.ResultBean mUserInfo = new LoginResponse.ResultBean();
     @Override
     protected IMvvmBaseViewModel getViewModel() {
         return null;
@@ -70,7 +74,11 @@ public class TestActivity
         viewDataBinding.tvOldTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/issue/getMainPageData")
+                HashMap<String,String> map = new HashMap<>();
+                map.put("token",mUserInfo.getToken());
+                Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/user/getUserInfo")
+                        //.upJson(GsonUtils.toJson(map))
+                        .headers("Authorization", "Bearer "+mUserInfo.getToken())
                         .cacheKey(getClass().getSimpleName())
                         .execute(new SimpleCallBack<String>() {
                             @Override
@@ -88,14 +96,11 @@ public class TestActivity
         viewDataBinding.tvLoginTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                HashMap<String,String> map = new HashMap<>();
+                map.put("username","wangdongfeng");
+                map.put("password","123456");
                 Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/mpapp/login2")
-                        //.params("code", "591")
-                        //.params("nickName", "first_try")
-                        //.params("avatarUrl", "111111111111111")
-                        .params("username", "wangdongfeng")
-                        .params("password", "123456")
-                        .removeAllHeaders()
-                        .headers("Content-Type",  "application/json")
+                        .upJson(GsonUtils.toJson(map))
                         .cacheKey("https://ap2.fuxiang.site/mpapp/login2")
                         .execute(new SimpleCallBack<String>() {
                             @Override
@@ -105,30 +110,20 @@ public class TestActivity
 
                             @Override
                             public void onSuccess(String s) {
+                                parseData(s);
                                 LogUtils.e(s);
                             }
                         });
-/*                Disposable disposable =
-                        EasyHttp.post("https://ap2.fuxiang.site").addFileParams()
-                                .cacheKey(getClass().getSimpleName())
-                                .execute(new SimpleCallBack<String>() {
-                                    @Override
-                                    public void onError(ApiException e) {
-                                        //loadFail(e.getMessage(), isRefresh);
-                                        LogUtils.e(e.getMessage());
-                                    }
-
-                                    @Override
-                                    public void onSuccess(String s) {
-                                        // parseJson(s);
-                                        LogUtils.e(s);
-                                    }
-                                });*/
             }
         });
-
     }
-
+    private void parseData(String s)
+    {
+        LoginResponse response = GsonUtils.fromLocalJson(s,LoginResponse.class);
+        if (response != null) {
+            mUserInfo = response.getResult();
+        }
+    }
     private void initView() {
     }
 
