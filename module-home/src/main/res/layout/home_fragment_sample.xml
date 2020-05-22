@@ -8,12 +8,28 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center">
+        android:gravity="center|top">
 
         <TextView
+            android:id="@+id/tv_hint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="just show the home sample" />
+            android:text="just show the home sample"
+            android:padding="@dimen/dp_40"/>
+        <TextView
+            android:id="@+id/tv_get_user"
+            android:layout_below="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click for user"
+            android:padding="@dimen/dp_40" />
+        <TextView
+            android:id="@+id/tv_get_homes"
+            android:layout_below="@+id/tv_get_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="click for home"
+            android:padding="@dimen/dp_40" />
     </RelativeLayout>
 </layout>
 

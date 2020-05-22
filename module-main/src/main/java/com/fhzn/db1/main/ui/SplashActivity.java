@@ -42,11 +42,11 @@ public class SplashActivity extends AppCompatActivity {
 
     private void startToMain() {
         if (MmkvHelper.getInstance().getMmkv().decodeBool("first",true)){
-            startActivity(new Intent(this, GuideActivity.class));
+            ARouter.getInstance().build(RouterActivityPath.Main.PAGER_TEST).navigation();
+            //startActivity(new Intent(this, GuideActivity.class));
         }else {
-            ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation();
-            //MainActivity.start(this);
-            //TestActivity.start(this);
+            ARouter.getInstance().build(RouterActivityPath.Main.PAGER_TEST).navigation();
+            //ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation();
         }
 
     }

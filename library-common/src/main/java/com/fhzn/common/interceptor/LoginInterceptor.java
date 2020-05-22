@@ -23,25 +23,26 @@ import com.orhanobut.logger.Logger;
 @Interceptor(priority = 8)
 public class LoginInterceptor implements IInterceptor {
     private Context context;
+
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
-        if (postcard.getPath().equals(RouterActivityPath.User.PAGER_ATTENTION)){
-            ILoginService iLoginService =ARouter.getInstance().navigation(ILoginService.class);
-            if (iLoginService.isLogin()){
+        if (postcard.getPath().equals(RouterActivityPath.User.PAGER_ATTENTION)) {
+            ILoginService iLoginService = ARouter.getInstance().navigation(ILoginService.class);
+            if (iLoginService.isLogin()) {
                 // 处理完成，交还控制权
                 callback.onContinue(postcard);
-            }else {
-             ARouter.getInstance().build(RouterActivityPath.User.PAGER_LOGIN).greenChannel().navigation(context);
-              callback.onInterrupt(null);
+            } else {
+                ARouter.getInstance().build(RouterActivityPath.User.PAGER_LOGIN).greenChannel().navigation(context);
+                callback.onInterrupt(null);
             }
-        }else {
+        } else {
             callback.onContinue(postcard);
         }
     }
 
     @Override
     public void init(Context context) {
-      this.context = context;
+        this.context = context;
         Logger.d("登录拦截器被初始化了");
     }
 }

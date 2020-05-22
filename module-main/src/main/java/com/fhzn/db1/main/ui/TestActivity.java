@@ -11,6 +11,7 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.blankj.utilcode.util.LogUtils;
 import com.fhzn.db1.main.R;
 import com.fhzn.db1.main.bean.LoginResponse;
+import com.fhzn.db1.main.bean.RequestIssue;
 import com.fhzn.db1.main.databinding.MainActivityTestBinding;
 import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
@@ -38,6 +39,7 @@ public class TestActivity
         extends MvvmBaseActivity<MainActivityTestBinding, IMvvmBaseViewModel> {
 
     LoginResponse.ResultBean mUserInfo = new LoginResponse.ResultBean();
+
     @Override
     protected IMvvmBaseViewModel getViewModel() {
         return null;
@@ -60,14 +62,11 @@ public class TestActivity
                 .autoDarkModeEnable(true)
                 .init();
         initView();
-        viewDataBinding.tvOldTest.setOnClickListener(new View.OnClickListener() {
+        viewDataBinding.tvGetUserTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HashMap<String,String> map = new HashMap<>();
-                map.put("token",mUserInfo.getToken());
                 Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/user/getUserInfo")
-                        //.upJson(GsonUtils.toJson(map))
-                        .headers("Authorization", "Bearer "+mUserInfo.getToken())
+                        .formatRequest(null)
                         .cacheKey(getClass().getSimpleName())
                         .execute(new SimpleCallBack<String>() {
                             @Override
@@ -82,12 +81,43 @@ public class TestActivity
                         });
             }
         });
+
+        viewDataBinding.tvGetHomeTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+/*                RequestIssue issue = new RequestIssue();
+                issue.setIssueId(100);
+                issue.setContent("test 100");*/
+                HashMap<String, String> map = new HashMap<>();
+                map.put("issueId", "99");
+                map.put("content", "test 99");
+
+                Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/issueComment/add")
+                        //.upJson(GsonUtils.toJson(map))
+                        .formatRequest(map)
+                        /*.upJson(GsonUtils.toJson(map))
+                        .headers("Authorization", "Bearer " + mUserInfo.getToken())*/
+                        .cacheKey(getClass().getSimpleName())
+                        .execute(new SimpleCallBack<String>() {
+                            @Override
+                            public void onError(ApiException e) {
+                                LogUtils.e(e.getMessage());
+                            }
+
+                            @Override
+                            public void onSuccess(String s) {
+                                LogUtils.e(s);
+                            }
+                        });
+            }
+        });
+
         viewDataBinding.tvLoginTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HashMap<String,String> map = new HashMap<>();
-                map.put("username","wangdongfeng");
-                map.put("password","123456");
+                HashMap<String, String> map = new HashMap<>();
+                map.put("username", "wangdongfeng");
+                map.put("password", "123456");
                 Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/mpapp/login2")
                         .upJson(GsonUtils.toJson(map))
                         .cacheKey("https://ap2.fuxiang.site/mpapp/login2")
@@ -106,13 +136,15 @@ public class TestActivity
             }
         });
     }
-    private void parseData(String s)
-    {
-        LoginResponse response = GsonUtils.fromLocalJson(s,LoginResponse.class);
+
+    private void parseData(String s) {
+        LoginResponse response = GsonUtils.fromLocalJson(s, LoginResponse.class);
         if (response != null) {
             mUserInfo = response.getResult();
+            MmkvHelper.getInstance().getMmkv().encode("token", mUserInfo.getToken());
         }
     }
+
     private void initView() {
     }
 

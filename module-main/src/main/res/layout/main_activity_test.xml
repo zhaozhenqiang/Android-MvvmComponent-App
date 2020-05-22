@@ -20,11 +20,18 @@
         android:text="登录测试"/>
 
     <TextView
-        android:id="@+id/tv_old_test"
+        android:id="@+id/tv_get_user_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/dp_40"
-        android:text="old测试"/>
+        android:text="get user"/>
+
+    <TextView
+        android:id="@+id/tv_get_home_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_40"
+        android:text="get home"/>
 
 </LinearLayout>
 </layout>

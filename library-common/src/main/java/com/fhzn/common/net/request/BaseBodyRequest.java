@@ -16,11 +16,19 @@
 
 package com.fhzn.common.net.request;
 
+import android.text.TextUtils;
+
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.blankj.utilcode.util.LogUtils;
 import com.fhzn.common.net.body.ProgressResponseCallBack;
 import com.fhzn.common.net.body.RequestBodyUtils;
 import com.fhzn.common.net.body.UploadProgressRequestBody;
 import com.fhzn.common.net.model.HttpParams;
 import com.fhzn.common.net.utils.Utils;
+import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.common.services.ILoginService;
+import com.fhzn.common.storage.MmkvHelper;
+import com.fhzn.common.utils.GsonUtils;
 
 import java.io.File;
 import java.io.InputStream;
@@ -42,7 +50,7 @@ import retrofit2.http.Body;
  * 日期： 2017/5/22 17:13 <br>
  * 版本： v1.0<br>
  */
-@SuppressWarnings(value={"unchecked", "deprecation"})
+@SuppressWarnings(value = {"unchecked", "deprecation"})
 public abstract class BaseBodyRequest<R extends BaseBodyRequest> extends BaseRequest<R> {
     protected String string;                                   //上传的文本内容
     protected MediaType mediaType;                                   //上传的文本内容
@@ -99,6 +107,22 @@ public abstract class BaseBodyRequest<R extends BaseBodyRequest> extends BaseReq
      */
     public R upJson(String json) {
         this.json = json;
+        return (R) this;
+    }
+
+    public R formatRequest(Map map) {
+        String token = MmkvHelper.getInstance().getMmkv().decodeString("token");
+        if (map != null) {
+            upJson(GsonUtils.toJson(map));
+            LogUtils.e("GsonUtils.toJson(map):" + GsonUtils.toJson(map));
+        }
+        if (!TextUtils.isEmpty(token)) {
+            LogUtils.e("token:" + token);
+            headers("Authorization", "Bearer " + token);
+        } else {
+            ARouter.getInstance().build(RouterActivityPath.User.PAGER_LOGIN).greenChannel().navigation();
+            // FIXME: 2020/5/22 LoginInterceptor 处理
+        }
         return (R) this;
     }
 
@@ -184,7 +208,7 @@ public abstract class BaseBodyRequest<R extends BaseBodyRequest> extends BaseReq
         List<MultipartBody.Part> parts = new ArrayList<>();
         //拼接参数键值对
         for (Map.Entry<String, String> mapEntry : params.urlParamsMap.entrySet()) {
-            parts.add(MultipartBody.Part.createFormData(mapEntry.getKey(),mapEntry.getValue()));
+            parts.add(MultipartBody.Part.createFormData(mapEntry.getKey(), mapEntry.getValue()));
         }
         //拼接文件
         for (Map.Entry<String, List<HttpParams.FileWrapper>> entry : params.fileParamsMap.entrySet()) {

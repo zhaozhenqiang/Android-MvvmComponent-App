@@ -17,8 +17,11 @@
 package com.fhzn.common.net.callback;
 
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.net.utils.Utils;
+import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.common.storage.MmkvHelper;
 
 import java.lang.reflect.Type;
 
@@ -33,7 +36,12 @@ public abstract class CallBack<T> implements IType<T> {
 
     public abstract void onCompleted();
 
-    public abstract void onError(ApiException e);
+    public void onError(ApiException e) {
+        if (e.getCode() == 401) {
+            MmkvHelper.getInstance().getMmkv().decodeString("token", "");
+            ARouter.getInstance().build(RouterActivityPath.User.PAGER_LOGIN).greenChannel().navigation();
+        }
+    }
 
     public abstract void onSuccess(T t);
 

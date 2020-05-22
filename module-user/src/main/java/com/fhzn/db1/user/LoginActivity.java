@@ -7,15 +7,29 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.blankj.utilcode.util.LogUtils;
+import com.fhzn.common.contract.UserInfo;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.callback.SimpleCallBack;
+import com.fhzn.common.net.exception.ApiException;
+import com.fhzn.common.storage.MmkvHelper;
+import com.fhzn.common.utils.GsonUtils;
+import com.fhzn.common.utils.ToastUtil;
 import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.services.ILoginService;
 import com.fhzn.common.services.config.ServicesConfig;
+import com.fhzn.db1.user.bean.LoginResponse;
 import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
+
+import java.util.HashMap;
+
+import io.reactivex.disposables.Disposable;
 
 /**
  * @author darryrzhoong
@@ -42,99 +56,47 @@ public class LoginActivity extends AppCompatActivity {
         //模拟登录
         iLoginService.saveStatus(false);
     }
+
     private void initView() {
-        ObjectAnimator animator1 = ObjectAnimator.ofFloat(binding.loginBgImage1, "alpha", 1.0f, 0f);
-        ObjectAnimator animator2 = ObjectAnimator.ofFloat(binding.loginBgImage2, "alpha", 0f, 1.0f);
-        ObjectAnimator animatorScale1 = ObjectAnimator.ofFloat(binding.loginBgImage1, "scaleX", 1.0f, 1.3f);
-        ObjectAnimator animatorScale2 = ObjectAnimator.ofFloat(binding.loginBgImage1, "scaleY", 1.0f, 1.3f);
-       AnimatorSet  animatorSet1 = new AnimatorSet();
-        animatorSet1.setDuration(5000);
-        animatorSet1.play(animator1).with(animator2).with(animatorScale1).with(animatorScale2);
-        animatorSet1.addListener(new Animator.AnimatorListener() {
+        binding.btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAnimationStart(Animator animation) {
+            public void onClick(View v) {
+                HashMap<String, String> map = new HashMap<>();
+                map.put("username", "wangdongfeng");
+                map.put("password", "123456");
+                Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/mpapp/login2")
+                        .upJson(GsonUtils.toJson(map))
+                        .cacheKey("https://ap2.fuxiang.site/mpapp/login2")
+                        .execute(new SimpleCallBack<String>() {
+                            @Override
+                            public void onError(ApiException e) {
+                                LogUtils.e(e.getMessage());
+                                ToastUtil.show(LoginActivity.this, e.getMessage());
+                            }
 
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                // 放大的View复位
-                binding.loginBgImage1.setScaleX(1.0f);
-                binding.loginBgImage1.setScaleY(1.0f);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
+                            @Override
+                            public void onSuccess(String s) {
+                                parseData(s);
+                            }
+                        });
             }
         });
-        ObjectAnimator animator3 = ObjectAnimator.ofFloat(binding.loginBgImage2, "alpha", 1.0f, 0f);
-        ObjectAnimator animator4 = ObjectAnimator.ofFloat(binding.loginBgImage1, "alpha", 0f, 1.0f);
-        ObjectAnimator animatorScale3 = ObjectAnimator.ofFloat(binding.loginBgImage2, "scaleX", 1.0f, 1.3f);
-        ObjectAnimator animatorScale4 = ObjectAnimator.ofFloat(binding.loginBgImage2, "scaleY", 1.0f, 1.3f);
-        AnimatorSet animatorSet2 = new AnimatorSet();
-        animatorSet2.setDuration(5000);
-        animatorSet2.play(animator3).with(animator4).with(animatorScale3).with(animatorScale4);
-        animatorSet2.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
+    }
 
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                // 放大的View复位
-                binding.loginBgImage2.setScaleX(1.0f);
-                binding.loginBgImage2.setScaleY(1.0f);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
-
-        animatorSet = new AnimatorSet();
-        animatorSet.playSequentially(animatorSet1, animatorSet2);
-        animatorSet.addListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                // 循环播放
-                animation.start();
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        });
-       animatorSet.start();
-
+    private void parseData(String s) {
+        LoginResponse response = GsonUtils.fromLocalJson(s, LoginResponse.class);
+        if (response != null && response.getResult() != null) {
+            LoginResponse.ResultBean user = response.getResult();
+            ToastUtil.show(LoginActivity.this, "success");
+            MmkvHelper.getInstance().getMmkv().encode("token", user.getToken());
+            finish();
+        } else {
+            ToastUtil.show(LoginActivity.this, "serve error, for a moment try");
+        }
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        animatorSet.cancel();
     }
 }
