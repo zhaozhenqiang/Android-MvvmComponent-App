@@ -1,4 +1,4 @@
-package com.drz.main.bean
+package com.fhzn.db1.main.bean
 
 /**
  * 应用模块:

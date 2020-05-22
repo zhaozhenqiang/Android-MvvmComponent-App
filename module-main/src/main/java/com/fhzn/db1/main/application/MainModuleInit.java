@@ -1,4 +1,4 @@
-package com.drz.main.application;
+package com.fhzn.db1.main.application;
 
 import com.blankj.utilcode.util.Utils;
 import com.fhzn.common.base.BaseApplication;

@@ -1,4 +1,4 @@
-package com.drz.main.adapter;
+package com.fhzn.db1.main.adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

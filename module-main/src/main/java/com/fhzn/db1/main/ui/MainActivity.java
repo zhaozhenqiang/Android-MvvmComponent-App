@@ -1,4 +1,4 @@
-package com.drz.main.ui;
+package com.fhzn.db1.main.ui;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,10 +16,10 @@ import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
-import com.drz.main.R;
-import com.drz.main.adapter.MainPageAdapter;
-import com.drz.main.databinding.MainActivityMainBinding;
-import com.drz.main.utils.ColorUtils;
+import com.fhzn.db1.main.R;
+import com.fhzn.db1.main.adapter.MainPageAdapter;
+import com.fhzn.db1.main.databinding.MainActivityMainBinding;
+import com.fhzn.db1.main.utils.ColorUtils;
 import com.gyf.immersionbar.ImmersionBar;
 
 import java.util.ArrayList;

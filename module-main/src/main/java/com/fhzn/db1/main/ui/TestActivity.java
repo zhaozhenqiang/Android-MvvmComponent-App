@@ -1,42 +1,31 @@
-package com.drz.main.ui;
+package com.fhzn.db1.main.ui;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Network;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.LogUtils;
-import com.drz.main.R;
-import com.drz.main.adapter.MainPageAdapter;
-import com.drz.main.bean.LoginResponse;
-import com.drz.main.databinding.MainActivityMainBinding;
-import com.drz.main.databinding.MainActivityTestBinding;
-import com.drz.main.utils.ColorUtils;
+import com.fhzn.db1.main.R;
+import com.fhzn.db1.main.bean.LoginResponse;
+import com.fhzn.db1.main.databinding.MainActivityTestBinding;
 import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.net.EasyHttp;
 import com.fhzn.common.net.callback.SimpleCallBack;
 import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.router.RouterActivityPath;
-import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.gyf.immersionbar.ImmersionBar;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import io.reactivex.disposables.Disposable;
-import me.majiajie.pagerbottomtabstrip.NavigationController;
 
 /**
  * app 主页面

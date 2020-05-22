@@ -1,4 +1,4 @@
-package com.drz.main.ui
+package com.fhzn.db1.main.ui
 
 
 import android.animation.AnimatorSet
@@ -8,9 +8,9 @@ import android.view.View
 import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
 import androidx.core.content.ContextCompat
-import com.drz.main.R
-import com.drz.main.bean.CustomBean
-import com.drz.main.viewholder.CustomPageViewHolder
+import com.fhzn.db1.main.R
+import com.fhzn.db1.main.bean.CustomBean
+import com.fhzn.db1.main.viewholder.CustomPageViewHolder
 import com.gyf.immersionbar.BarHide
 import com.gyf.immersionbar.ImmersionBar
 import com.zhpan.bannerview.BannerViewPager

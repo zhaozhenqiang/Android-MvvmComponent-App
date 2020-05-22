@@ -1,4 +1,4 @@
-package com.drz.main.bean;
+package com.fhzn.db1.main.bean;
 
 /**
  * reated by zhaozq on 2020/5/22.

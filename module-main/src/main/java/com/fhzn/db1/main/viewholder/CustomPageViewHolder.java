@@ -1,11 +1,11 @@
-package com.drz.main.viewholder;
+package com.fhzn.db1.main.viewholder;
 
 import android.animation.ObjectAnimator;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.drz.main.R;
-import com.drz.main.bean.CustomBean;
+import com.fhzn.db1.main.R;
+import com.fhzn.db1.main.bean.CustomBean;
 import com.zhpan.bannerview.holder.ViewHolder;
 
 /**

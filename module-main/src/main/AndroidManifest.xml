@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.drz.main">
+    package="com.fhzn.db1.main">
 
     <application>
-        <activity android:name="com.drz.main.ui.SplashActivity"
+        <activity android:name="com.fhzn.db1.main.ui.SplashActivity"
             android:theme="@style/AppTheme.Start"
             android:screenOrientation="portrait"
             >
@@ -13,11 +13,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity"
+        <activity android:name="com.fhzn.db1.main.ui.MainActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".ui.GuideActivity"/>
-        <activity android:name=".ui.TestActivity"/>
+        <activity android:name="com.fhzn.db1.main.ui.GuideActivity"/>
+        <activity android:name="com.fhzn.db1.main.ui.TestActivity"/>
     </application>
 
 </manifest>

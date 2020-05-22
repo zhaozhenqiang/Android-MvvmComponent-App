@@ -1,4 +1,4 @@
-package com.drz.main.ui;
+package com.fhzn.db1.main.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
-import com.drz.main.R;
+import com.fhzn.db1.main.R;
 import com.gyf.immersionbar.BarHide;
 import com.gyf.immersionbar.ImmersionBar;
 
