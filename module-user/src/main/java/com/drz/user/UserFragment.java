@@ -73,7 +73,7 @@ public class UserFragment
         viewDataBinding.rvTables
                 .setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new RecyclerAdapter();
-        adapter.setFooterView(getFooterView());
+        //adapter.setFooterView(getFooterView());
         viewDataBinding.rvTables.setAdapter(adapter);
         viewDataBinding.ivMore.setOnClickListener(v -> {
             start(getContext());
