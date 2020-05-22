@@ -1,4 +1,4 @@
-package com.drz.user;
+package com.fhzn.db1.user;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -11,10 +11,11 @@ import android.os.Bundle;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.services.ILoginService;
 import com.fhzn.common.services.config.ServicesConfig;
-import com.drz.user.databinding.UserActivityLoginBinding;
+import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
 
 /**
  * @author darryrzhoong
@@ -32,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ARouter.getInstance().inject(this);
-        binding = DataBindingUtil.setContentView(this,R.layout.user_activity_login);
+        binding = DataBindingUtil.setContentView(this, R.layout.user_activity_login);
         initView();
         initData();
     }

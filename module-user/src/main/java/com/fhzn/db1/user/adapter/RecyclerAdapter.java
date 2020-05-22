@@ -1,13 +1,8 @@
-package com.drz.user.adapter;
+package com.fhzn.db1.user.adapter;
 
-import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CircleCrop;
-import com.bumptech.glide.request.RequestOptions;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.drz.user.R;
+import com.fhzn.db1.user.R;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

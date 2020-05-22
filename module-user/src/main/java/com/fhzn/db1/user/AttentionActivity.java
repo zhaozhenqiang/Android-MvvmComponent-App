@@ -1,4 +1,4 @@
-package com.drz.user;
+package com.fhzn.db1.user;
 
 import android.os.Bundle;
 
@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
 
 /**

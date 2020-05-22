@@ -1,4 +1,4 @@
-package com.drz.user;
+package com.fhzn.db1.user;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,11 +14,12 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
+import com.fhzn.db1.user.R;
 import com.fhzn.common.fragment.MvvmBaseFragment;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.common.router.RouterFragmentPath;
-import com.drz.user.adapter.RecyclerAdapter;
-import com.drz.user.databinding.UserFragmentLayoutBinding;
+import com.fhzn.db1.user.adapter.RecyclerAdapter;
+import com.fhzn.db1.user.databinding.UserFragmentLayoutBinding;
 
 import java.util.ArrayList;
 import java.util.List;

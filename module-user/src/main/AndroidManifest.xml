@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.drz.user">
+    package="com.fhzn.db1.user">
 
     <application >
-        <activity android:name=".LoginActivity"
+        <activity android:name="com.fhzn.db1.user.LoginActivity"
             android:screenOrientation="portrait"
             />
-        <activity android:name=".AttentionActivity"/>
+        <activity android:name="com.fhzn.db1.user.AttentionActivity"/>
     </application>
 
 </manifest>

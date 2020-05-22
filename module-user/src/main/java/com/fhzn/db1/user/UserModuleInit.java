@@ -1,4 +1,4 @@
-package com.drz.user;
+package com.fhzn.db1.user;
 
 import com.fhzn.common.base.BaseApplication;
 import com.fhzn.common.IModuleInit;
