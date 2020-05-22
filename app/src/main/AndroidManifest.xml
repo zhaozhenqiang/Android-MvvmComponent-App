@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.drz.mvvmcomponent">
+    package="com.fhzn.db1">
 
     <application
         android:name=".AppApplication"

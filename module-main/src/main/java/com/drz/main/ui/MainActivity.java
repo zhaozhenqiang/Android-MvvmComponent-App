@@ -79,21 +79,21 @@ public class MainActivity
             .addItem(R.drawable.main_home,
                 "首页",
                 ColorUtils.getColor(this, R.color.main_bottom_check_color))
-            .addItem(R.drawable.main_community,
+            /*.addItem(R.drawable.main_community,
                 "社区",
                 ColorUtils.getColor(this, R.color.main_bottom_check_color))
             .addItem(R.drawable.main_notify,
                 "通知",
-                ColorUtils.getColor(this, R.color.main_bottom_check_color))
+                ColorUtils.getColor(this, R.color.main_bottom_check_color))*/
             .addItem(R.drawable.main_user,
                 "我的",
                 ColorUtils.getColor(this, R.color.main_bottom_check_color))
             .setDefaultColor(
                 ColorUtils.getColor(this, R.color.main_bottom_default_color))
-            .enableAnimateLayoutChanges()
+            //.enableAnimateLayoutChanges()
             .build();
-        mNavigationController.setHasMessage(2, true);
-        mNavigationController.setMessageNumber(3, 6);
+        mNavigationController.setHasMessage(0, false);
+        mNavigationController.setMessageNumber(1, 6);
         adapter = new MainPageAdapter(getSupportFragmentManager(),
             FragmentPagerAdapter.BEHAVIOR_SET_USER_VISIBLE_HINT);
         viewDataBinding.cvContentView.setOffscreenPageLimit(1);
@@ -105,13 +105,13 @@ public class MainActivity
     {
         fragments = new ArrayList<>();
         //通过ARouter 获取其他组件提供的fragment
-        Fragment homeFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_HOME).navigation();
-        Fragment communityFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Community.PAGER_COMMUNITY).navigation();
-        Fragment moreFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.More.PAGER_MORE).navigation();
+        Fragment homeFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_HOME_SAMPLE).navigation();
+/*        Fragment communityFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Community.PAGER_COMMUNITY).navigation();
+        Fragment moreFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.More.PAGER_MORE).navigation();*/
         Fragment userFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.User.PAGER_USER).navigation();
         fragments.add(homeFragment);
-        fragments.add(communityFragment);
-        fragments.add(moreFragment);
+/*        fragments.add(communityFragment);
+        fragments.add(moreFragment);*/
         fragments.add(userFragment);
         adapter.setData(fragments);
     }

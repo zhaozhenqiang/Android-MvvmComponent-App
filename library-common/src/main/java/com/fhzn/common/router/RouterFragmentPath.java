@@ -19,7 +19,8 @@ public class RouterFragmentPath
         
         /** 首页 */
         public static final String PAGER_HOME = HOME + "/Home";
-        
+        public static final String PAGER_HOME_SAMPLE = HOME + "/Sample";
+
     }
     
     /** 社区组件 */

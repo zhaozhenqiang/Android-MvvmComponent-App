@@ -54,10 +54,10 @@ public class UserFragment
         List<String> items = new ArrayList<>();
         items.add("我的关注");
         items.add("我的收藏");
-        items.add("视频功能声明");
+        //items.add("视频功能声明");
         items.add("用户协议");
         items.add("版权声明");
-        items.add("关于作者");
+        items.add("关于复泓");
         adapter.setNewData(items);
     }
 

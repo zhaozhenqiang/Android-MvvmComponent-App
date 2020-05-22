@@ -42,7 +42,8 @@ public class SplashActivity extends AppCompatActivity {
         if (MmkvHelper.getInstance().getMmkv().decodeBool("first",true)){
             startActivity(new Intent(this, GuideActivity.class));
         }else {
-            TestActivity.start(this);
+            MainActivity.start(this);
+            //TestActivity.start(this);
         }
 
     }
