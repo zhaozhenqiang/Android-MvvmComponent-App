@@ -99,12 +99,8 @@ public class MainActivity
         fragments = new ArrayList<>();
         //通过ARouter 获取其他组件提供的fragment
         Fragment homeFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_HOME_SAMPLE).navigation();
-/*        Fragment communityFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.Community.PAGER_COMMUNITY).navigation();
-        Fragment moreFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.More.PAGER_MORE).navigation();*/
         Fragment userFragment = (Fragment) ARouter.getInstance().build(RouterFragmentPath.User.PAGER_USER).navigation();
         fragments.add(homeFragment);
-/*        fragments.add(communityFragment);
-        fragments.add(moreFragment);*/
         fragments.add(userFragment);
         adapter.setData(fragments);
     }

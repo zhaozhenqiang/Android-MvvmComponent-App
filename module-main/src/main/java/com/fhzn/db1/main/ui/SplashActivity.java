@@ -7,6 +7,8 @@ import android.os.Handler;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.db1.main.R;
@@ -42,7 +44,8 @@ public class SplashActivity extends AppCompatActivity {
         if (MmkvHelper.getInstance().getMmkv().decodeBool("first",true)){
             startActivity(new Intent(this, GuideActivity.class));
         }else {
-            MainActivity.start(this);
+            ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation();
+            //MainActivity.start(this);
             //TestActivity.start(this);
         }
 
