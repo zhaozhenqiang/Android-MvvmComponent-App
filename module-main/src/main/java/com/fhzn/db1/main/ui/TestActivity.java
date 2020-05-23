@@ -11,7 +11,6 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.blankj.utilcode.util.LogUtils;
 import com.fhzn.db1.main.R;
 import com.fhzn.db1.main.bean.LoginResponse;
-import com.fhzn.db1.main.bean.RequestIssue;
 import com.fhzn.db1.main.databinding.MainActivityTestBinding;
 import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
@@ -85,9 +84,6 @@ public class TestActivity
         viewDataBinding.tvGetHomeTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-/*                RequestIssue issue = new RequestIssue();
-                issue.setIssueId(100);
-                issue.setContent("test 100");*/
                 HashMap<String, String> map = new HashMap<>();
                 map.put("issueId", "99");
                 map.put("content", "test 99");

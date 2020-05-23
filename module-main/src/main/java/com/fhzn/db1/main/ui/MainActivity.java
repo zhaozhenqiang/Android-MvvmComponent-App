@@ -10,6 +10,7 @@ import android.os.Bundle;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.blankj.utilcode.util.ColorUtils;
 import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
@@ -19,7 +20,6 @@ import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.db1.main.R;
 import com.fhzn.db1.main.adapter.MainPageAdapter;
 import com.fhzn.db1.main.databinding.MainActivityMainBinding;
-import com.fhzn.db1.main.utils.ColorUtils;
 import com.gyf.immersionbar.ImmersionBar;
 
 import java.util.ArrayList;
@@ -78,12 +78,12 @@ public class MainActivity
         mNavigationController = viewDataBinding.bottomView.material()
             .addItem(R.drawable.main_home,
                 "首页",
-                ColorUtils.getColor(this, R.color.main_bottom_check_color))
+                ColorUtils.getColor(R.color.main_bottom_check_color))
             .addItem(R.drawable.main_user,
                 "我的",
-                ColorUtils.getColor(this, R.color.main_bottom_check_color))
+                ColorUtils.getColor(R.color.main_bottom_check_color))
             .setDefaultColor(
-                ColorUtils.getColor(this, R.color.main_bottom_default_color))
+                ColorUtils.getColor(R.color.main_bottom_default_color))
             .build();
         mNavigationController.setHasMessage(0, false);
         mNavigationController.setMessageNumber(1, 6);

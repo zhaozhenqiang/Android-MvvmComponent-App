@@ -95,8 +95,6 @@ dependencies {
         implementation project(':module-main')
         //首页模块
         implementation project(':module-home')
-        //更多模块
-        implementation project(':module-more')
         //用户模块
         implementation project(':module-user')
     }
