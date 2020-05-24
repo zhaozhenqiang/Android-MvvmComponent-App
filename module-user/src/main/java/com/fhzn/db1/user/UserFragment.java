@@ -11,18 +11,23 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.blankj.utilcode.util.LogUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.fhzn.db1.user.R;
 import com.fhzn.common.fragment.MvvmBaseFragment;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.net.EasyHttp;
+import com.fhzn.common.net.callback.SimpleCallBack;
+import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.router.RouterFragmentPath;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.adapter.RecyclerAdapter;
 import com.fhzn.db1.user.databinding.UserFragmentLayoutBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import io.reactivex.disposables.Disposable;
 
 /**
  * 应用模块:
@@ -34,8 +39,7 @@ import java.util.List;
  * @since 2020-02-28
  */
 @Route(path = RouterFragmentPath.User.PAGER_USER)
-public class UserFragment
-        extends MvvmBaseFragment<UserFragmentLayoutBinding, IMvvmBaseViewModel> {
+public class UserFragment extends MvvmBaseFragment<UserFragmentLayoutBinding, IMvvmBaseViewModel> {
 
     private RecyclerAdapter adapter;
 
@@ -55,7 +59,6 @@ public class UserFragment
         List<String> items = new ArrayList<>();
         items.add("我的关注");
         items.add("我的收藏");
-        //items.add("视频功能声明");
         items.add("用户协议");
         items.add("版权声明");
         items.add("关于复泓");
@@ -80,11 +83,35 @@ public class UserFragment
             start(getContext());
         });
         viewDataBinding.tvLike.setOnClickListener(v -> {
-            start(getContext());
+            getNetData("error");
         });
-        viewDataBinding.tvReply.setOnClickListener(v -> {
-            start(getContext());
+        viewDataBinding.tvReply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               getNetData(null);
+            }
         });
+    }
+
+    private void getNetData(String errorTag) {
+        showLoading();
+        Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/user/getUserInfo" + errorTag)
+                .formatRequest(null)
+                .cacheKey(getClass().getSimpleName())
+                .execute(new SimpleCallBack<String>() {
+                    @Override
+                    public void onError(ApiException e) {
+                        LogUtils.e(e.getMessage());
+                        showFailure(e.getMessage());
+                    }
+
+                    @Override
+                    public void onSuccess(String s) {
+                        viewDataBinding.tvTip.setText(s);
+                        showContent();
+                        LogUtils.e(s);
+                    }
+                });
     }
 
     private View getFooterView() {

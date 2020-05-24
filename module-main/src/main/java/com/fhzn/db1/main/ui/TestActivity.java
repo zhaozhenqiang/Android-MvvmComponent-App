@@ -9,9 +9,6 @@ import androidx.annotation.Nullable;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.db1.main.R;
-import com.fhzn.db1.main.bean.LoginResponse;
-import com.fhzn.db1.main.databinding.MainActivityTestBinding;
 import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.net.EasyHttp;
@@ -21,6 +18,9 @@ import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.db1.main.R;
+import com.fhzn.db1.main.bean.LoginResponse;
+import com.fhzn.db1.main.databinding.MainActivityTestBinding;
 import com.gyf.immersionbar.ImmersionBar;
 
 import java.util.HashMap;

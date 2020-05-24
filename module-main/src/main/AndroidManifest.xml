@@ -3,21 +3,25 @@
     package="com.fhzn.db1.main">
 
     <application>
-        <activity android:name="com.fhzn.db1.main.ui.SplashActivity"
-            android:theme="@style/AppTheme.Start"
+        <activity
+            android:name="com.fhzn.db1.main.ui.SplashActivity"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/AppTheme.Start">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.fhzn.db1.main.ui.MainActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name="com.fhzn.db1.main.ui.GuideActivity"/>
-        <activity android:name="com.fhzn.db1.main.ui.TestActivity"/>
+        <activity
+            android:name="com.fhzn.db1.main.ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fhzn.db1.main.ui.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fhzn.db1.main.ui.TestActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
