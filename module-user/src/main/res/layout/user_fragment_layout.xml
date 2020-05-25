@@ -7,7 +7,6 @@
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -35,7 +34,7 @@
             android:id="@+id/tv_tip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="message"
+            android:text="点击登录即可评论及发布内容"
             android:textColor="@android:color/black"
             android:textSize="12sp"
             android:padding="@dimen/dp_10"
@@ -62,7 +61,7 @@
             android:layout_marginTop="20dp"
             android:drawableLeft="@drawable/common_collection"
             android:gravity="center"
-            android:text="error_test"
+            android:text="收藏"
             android:textSize="13sp"
             android:textColor="@color/common_color_small_text"
             app:layout_constraintEnd_toStartOf="@+id/user_view"
@@ -75,7 +74,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/common_collection"
             android:gravity="center"
-            android:text="success_test"
+            android:text="测试"
             android:textSize="13sp"
             android:textColor="@color/common_color_small_text"
             app:layout_constraintBottom_toBottomOf="@+id/tv_like"
@@ -92,11 +91,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_like" />
-        <com.scwang.smart.refresh.layout.SmartRefreshLayout
-            android:id="@+id/refreshLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_tables"
             android:layout_width="0dp"
@@ -106,6 +101,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/user_view2" />
-        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
