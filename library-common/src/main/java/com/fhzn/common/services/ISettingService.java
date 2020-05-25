@@ -36,7 +36,4 @@ public interface ISettingService extends IProvider {
     public int getThemeValue();
 
     public void setThemeValue(String theme);
-
-
-
 }
