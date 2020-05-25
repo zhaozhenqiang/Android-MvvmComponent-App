@@ -15,7 +15,9 @@ import com.blankj.utilcode.util.LogUtils;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
+import com.fhzn.common.activity.MvvmBaseActivity;
 import com.fhzn.common.fragment.MvvmBaseFragment;
+import com.fhzn.common.fragment.MvvmLazyFragment;
 import com.fhzn.common.net.EasyHttp;
 import com.fhzn.common.net.callback.SimpleCallBack;
 import com.fhzn.common.net.exception.ApiException;
@@ -23,6 +25,10 @@ import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.adapter.RecyclerAdapter;
 import com.fhzn.db1.user.databinding.UserFragmentLayoutBinding;
+import com.kingja.loadsir.callback.Callback;
+import com.kingja.loadsir.core.LoadService;
+import com.kingja.loadsir.core.LoadSir;
+import com.scwang.smart.refresh.header.ClassicsHeader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,20 +94,30 @@ public class UserFragment extends MvvmBaseFragment<UserFragmentLayoutBinding, IM
         viewDataBinding.tvReply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               getNetData(null);
+                getNetData(null);
             }
         });
+        viewDataBinding.refreshLayout
+                .setRefreshHeader(new ClassicsHeader(this.getContext()));
+        viewDataBinding.refreshLayout.finishRefresh(true);
+        setLoadSir(viewDataBinding.refreshLayout);
     }
 
-    private void getNetData(String errorTag) {
+    private void getNetData(String tag) {
         showLoading();
-        Disposable disposable = EasyHttp.post("https://ap2.fuxiang.site/user/getUserInfo" + errorTag)
+        if (tag == null) {
+            tag = "https://ap2.fuxiang.site/user/getUserInfo";
+        } else {
+            tag = "https://ap2.fuxiang.site/user/getUserInfo22";
+        }
+        Disposable disposable = EasyHttp.post(tag)
                 .formatRequest(null)
                 .cacheKey(getClass().getSimpleName())
                 .execute(new SimpleCallBack<String>() {
                     @Override
                     public void onError(ApiException e) {
                         LogUtils.e(e.getMessage());
+                        //setLoadSir(viewDataBinding.getRoot());
                         showFailure(e.getMessage());
                     }
 

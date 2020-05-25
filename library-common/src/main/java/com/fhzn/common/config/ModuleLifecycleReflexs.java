@@ -9,17 +9,21 @@ package com.fhzn.common.config;
  * @author darryrzhoong
  * @since 2020-02-25
  */
-public class ModuleLifecycleReflexs
-{
-    /** 基础库 */
+public class ModuleLifecycleReflexs {
+    /**
+     * 基础库
+     */
     private static final String BaseInit = "com.fhzn.common.CommonModuleInit";
-    
-    /** main组件库 */
-    private static final String MainInit =
-        "com.fhzn.db1.main.application.MainModuleInit";
 
-    /**用户组件初始化*/
+    /**
+     * main组件库
+     */
+    private static final String MainInit = "com.fhzn.db1.main.application.MainModuleInit";
+
+    /**
+     * 用户组件初始化
+     */
     private static final String UserInit = "com.fhzn.db1.user.UserModuleInit";
-    
-    public static String[] initModuleNames = {BaseInit, MainInit,UserInit};
+
+    public static String[] initModuleNames = {BaseInit, MainInit, UserInit,};
 }

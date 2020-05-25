@@ -35,7 +35,7 @@ public class MainModuleInit implements IModuleInit
             EasyHttp.getInstance().debug("easyhttp", true);
         }
         EasyHttp.getInstance()
-            .setBaseUrl("http://baobab.kaiyanapp.com")
+            .setBaseUrl("https://ap2.fuxiang.site")
             .setReadTimeOut(15 * 1000)
             .setWriteTimeOut(15 * 1000)
             .setConnectTimeout(15 * 1000)

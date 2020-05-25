@@ -6,8 +6,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.fhzn.common.activity.MvvmBaseActivity;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
 
 /**
  * 应用模块:
@@ -19,10 +22,33 @@ import com.fhzn.common.router.RouterActivityPath;
  * @since 2020-02-29
  */
 @Route(path = RouterActivityPath.User.PAGER_ATTENTION)
-public class AttentionActivity extends AppCompatActivity {
+public class AttentionActivity extends MvvmBaseActivity<UserActivityLoginBinding, IMvvmBaseViewModel> {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_activity_attention);
     }
+
+    @Override
+    protected IMvvmBaseViewModel getViewModel() {
+        return null;
+    }
+
+    @Override
+    protected int getBindingVariable() {
+        return 0;
+    }
+
+    @Override
+    protected void onRetryBtnClick() {
+
+    }
+    private void initView() {
+    }
+
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.user_activity_attention;
+    }
+
 }
