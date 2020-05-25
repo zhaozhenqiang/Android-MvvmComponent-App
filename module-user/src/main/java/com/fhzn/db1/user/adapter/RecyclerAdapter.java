@@ -46,7 +46,7 @@ public class RecyclerAdapter extends BaseQuickAdapter<String, BaseViewHolder> im
             switch (tag) {
                 case "我的关注":
                 case "我的收藏":
-                    ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_HOME).navigation();
+                    ARouter.getInstance().build(RouterFragmentPath.Home.PAGER_HOME_SAMPLE).navigation();
                     break;
                 default:
                     ToastUtil t;

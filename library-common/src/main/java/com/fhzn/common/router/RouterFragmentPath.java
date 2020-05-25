@@ -18,7 +18,6 @@ public class RouterFragmentPath
         private static final String HOME = "/home";
         
         /** 首页 */
-        public static final String PAGER_HOME = HOME + "/Home";
         public static final String PAGER_HOME_SAMPLE = HOME + "/Sample";
 
     }

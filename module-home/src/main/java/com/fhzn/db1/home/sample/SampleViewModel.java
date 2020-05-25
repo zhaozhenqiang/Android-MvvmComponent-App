@@ -2,18 +2,14 @@ package com.fhzn.db1.home.sample;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.fhzn.common.contract.BaseCustomViewModel;
 import com.fhzn.common.model.BasePagingModel;
 import com.fhzn.common.model.IPagingModelListener;
 import com.fhzn.common.net.callback.SimpleCallBack;
 import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.viewmodel.MvmBaseViewModel;
-import com.fhzn.db1.home.daily.DailyModel;
-import com.fhzn.db1.home.daily.IDailyView;
 import com.fhzn.db1.home.sample.bean.AddResponse;
 import com.fhzn.db1.home.sample.bean.SampleBean;
-import com.fhzn.db1.home.sample.bean.SampleWrapper;
 
 import java.util.ArrayList;
 

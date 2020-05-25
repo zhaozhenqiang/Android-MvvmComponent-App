@@ -10,17 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.common.contract.BaseCustomViewModel;
 import com.fhzn.common.fragment.MvvmBaseFragment;
-import com.fhzn.common.net.EasyHttp;
-import com.fhzn.common.net.callback.SimpleCallBack;
-import com.fhzn.common.net.exception.ApiException;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.home.R;
-import com.fhzn.db1.home.daily.adapter.ProviderDailyAdapter;
 import com.fhzn.db1.home.databinding.HomeFragmentSampleBinding;
 import com.fhzn.db1.home.sample.adapter.SampleAdapter;
 import com.fhzn.db1.home.sample.bean.SampleBean;
@@ -28,9 +21,6 @@ import com.scwang.smart.refresh.footer.ClassicsFooter;
 import com.scwang.smart.refresh.header.ClassicsHeader;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-
-import io.reactivex.disposables.Disposable;
 
 /**
  * reated by zhaozq on 2020/5/22.

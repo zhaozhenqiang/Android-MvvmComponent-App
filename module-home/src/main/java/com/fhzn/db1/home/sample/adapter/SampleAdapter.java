@@ -4,10 +4,7 @@ import androidx.databinding.DataBindingUtil;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.viewholder.BaseViewHolder;
-import com.fhzn.db1.home.databinding.HomeItemCategoryItemCardViewBinding;
-import com.fhzn.db1.home.databinding.HomeItemCategoryItemSubjectCardViewBinding;
 import com.fhzn.db1.home.databinding.HomeItemSampleTitleBinding;
-import com.fhzn.db1.home.discover.bean.SquareCard;
 import com.fhzn.db1.home.sample.bean.SampleBean;
 
 import org.jetbrains.annotations.NotNull;

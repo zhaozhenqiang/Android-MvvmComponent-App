@@ -1,30 +1,16 @@
 package com.fhzn.db1.home.sample;
 
-import android.text.TextUtils;
-
 import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.common.contract.BaseCustomViewModel;
 import com.fhzn.common.model.BasePagingModel;
 import com.fhzn.common.net.EasyHttp;
-import com.fhzn.common.net.cache.model.CacheMode;
 import com.fhzn.common.net.callback.SimpleCallBack;
 import com.fhzn.common.net.exception.ApiException;
-import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.common.utils.GsonUtils;
-import com.fhzn.db1.home.nominate.bean.FollowCardBean;
-import com.fhzn.db1.home.nominate.bean.TextCardBean;
-import com.fhzn.db1.home.nominate.bean.viewmodel.FollowCardViewModel;
-import com.fhzn.db1.home.nominate.bean.viewmodel.SingleTitleViewModel;
 import com.fhzn.db1.home.sample.bean.SampleBean;
 import com.fhzn.db1.home.sample.bean.SampleWrapper;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 import io.reactivex.disposables.Disposable;
 
