@@ -1,10 +1,8 @@
 package com.fhzn.db1.main.ui
 
-import androidx.appcompat.app.AppCompatActivity
-
 import android.os.Bundle
-
-import java.util.ArrayList
+import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 abstract class BaseDataActivity : AppCompatActivity() {
 

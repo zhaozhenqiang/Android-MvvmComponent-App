@@ -3,13 +3,11 @@ package com.fhzn.db1.user;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.fhzn.common.activity.MvvmBaseActivity;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
-import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
 
 /**
@@ -42,10 +40,6 @@ public class AttentionActivity extends MvvmBaseActivity<UserActivityLoginBinding
     protected void onRetryBtnClick() {
 
     }
-    private void initView() {
-    }
-
-
     @Override
     protected int getLayoutId() {
         return R.layout.user_activity_attention;

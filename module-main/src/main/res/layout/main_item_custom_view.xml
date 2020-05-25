@@ -10,5 +10,4 @@
         android:contentDescription="guide"
         android:scaleType="fitXY" />
 
-
 </RelativeLayout>

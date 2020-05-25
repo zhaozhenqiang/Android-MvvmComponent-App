@@ -14,10 +14,9 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
-import com.fhzn.db1.user.R;
 import com.fhzn.common.fragment.MvvmBaseFragment;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.common.router.RouterFragmentPath;
+import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.adapter.RecyclerAdapter;
 import com.fhzn.db1.user.databinding.UserFragmentLayoutBinding;
 

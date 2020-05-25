@@ -1,29 +1,25 @@
 package com.fhzn.db1.user;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
-import android.animation.Animator;
 import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.common.contract.UserInfo;
 import com.fhzn.common.net.EasyHttp;
 import com.fhzn.common.net.callback.SimpleCallBack;
 import com.fhzn.common.net.exception.ApiException;
-import com.fhzn.common.storage.MmkvHelper;
-import com.fhzn.common.utils.GsonUtils;
-import com.fhzn.common.utils.ToastUtil;
-import com.fhzn.db1.user.R;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.services.ILoginService;
 import com.fhzn.common.services.config.ServicesConfig;
+import com.fhzn.common.storage.MmkvHelper;
+import com.fhzn.common.utils.GsonUtils;
+import com.fhzn.common.utils.ToastUtil;
 import com.fhzn.db1.user.bean.LoginResponse;
 import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
 

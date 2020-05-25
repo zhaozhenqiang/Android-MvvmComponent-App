@@ -26,7 +26,6 @@ import io.reactivex.disposables.Disposable;
 public class SampleModel<T> extends BasePagingModel<T> {
 
     private Disposable mDisposableData;
-    private Disposable mDisposableAdd;
 
     @Override
     protected void load() {
@@ -62,7 +61,6 @@ public class SampleModel<T> extends BasePagingModel<T> {
     public void cancel() {
         super.cancel();
         EasyHttp.cancelSubscription(mDisposableData);
-        EasyHttp.cancelSubscription(mDisposableAdd);
     }
 
     public void loadMore(String nextPageUrl) {
@@ -91,11 +89,11 @@ public class SampleModel<T> extends BasePagingModel<T> {
      */
     private void parseJson(String s) {
         SampleWrapper response = GsonUtils.fromLocalJson(s, SampleWrapper.class);
-        if(response == null || response.getResult() == null || response.getResult().size() == 0) {
-            loadSuccess(null , false, isRefresh);
+        if (response == null || response.getResult() == null || response.getResult().size() == 0) {
+            loadSuccess(null, false, isRefresh);
         } else {
             ArrayList<SampleBean> mList = response.getResult();
-            loadSuccess((T)mList, false, isRefresh);
+            loadSuccess((T) mList, false, isRefresh);
         }
     }
 }

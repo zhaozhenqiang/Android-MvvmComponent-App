@@ -1,7 +1,7 @@
 package com.fhzn.db1.user;
 
-import com.fhzn.common.base.BaseApplication;
 import com.fhzn.common.IModuleInit;
+import com.fhzn.common.base.BaseApplication;
 
 /**
  * 应用模块:

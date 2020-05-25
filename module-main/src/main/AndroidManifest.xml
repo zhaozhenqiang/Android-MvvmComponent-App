@@ -19,9 +19,6 @@
         <activity
             android:name="com.fhzn.db1.main.ui.GuideActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name="com.fhzn.db1.main.ui.TestActivity"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

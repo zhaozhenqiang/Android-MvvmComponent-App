@@ -8,9 +8,9 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.storage.MmkvHelper;
-import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.db1.main.R;
 import com.gyf.immersionbar.BarHide;
 import com.gyf.immersionbar.ImmersionBar;
@@ -41,10 +41,10 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void startToMain() {
-        if (MmkvHelper.getInstance().getMmkv().decodeBool("first",true)){
+        if (MmkvHelper.getInstance().getMmkv().decodeBool("first", true)) {
             //ARouter.getInstance().build(RouterActivityPath.Main.PAGER_TEST).navigation();
             startActivity(new Intent(this, GuideActivity.class));
-        }else {
+        } else {
             //ARouter.getInstance().build(RouterActivityPath.Main.PAGER_TEST).navigation();
             ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation();
         }

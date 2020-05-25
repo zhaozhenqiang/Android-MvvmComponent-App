@@ -37,11 +37,11 @@ public class RecyclerAdapter extends BaseQuickAdapter<String, BaseViewHolder> im
 
     @Override
     public void onClick(View v) {
-        if(v == null) {
+        if (v == null) {
             return;
         }
-        if(v instanceof TextView) {
-            String tag = ((TextView)v).getText().toString();
+        if (v instanceof TextView) {
+            String tag = ((TextView) v).getText().toString();
             com.blankj.utilcode.util.ToastUtils.showShort(tag);
             switch (tag) {
                 case "我的关注":

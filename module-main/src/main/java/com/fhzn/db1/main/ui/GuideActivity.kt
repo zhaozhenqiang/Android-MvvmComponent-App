@@ -20,9 +20,7 @@ import com.zhpan.bannerview.holder.HolderCreator
 import com.zhpan.bannerview.utils.BannerUtils
 import com.zhpan.indicator.enums.IndicatorSlideMode
 import kotlinx.android.synthetic.main.main_activity_guide.*
-
-import java.util.ArrayList
-import java.util.Random
+import java.util.*
 
 class GuideActivity : BaseDataActivity(), HolderCreator<CustomPageViewHolder> {
 

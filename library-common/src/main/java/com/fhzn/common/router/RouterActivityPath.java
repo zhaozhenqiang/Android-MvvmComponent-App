@@ -20,8 +20,6 @@ public class RouterActivityPath
         
         /** 主页面 */
         public static final String PAGER_MAIN = MAIN + "/Main";
-        /** 测试页面 */
-        public static final String PAGER_TEST = MAIN + "/Test";
     }
     
     /**
