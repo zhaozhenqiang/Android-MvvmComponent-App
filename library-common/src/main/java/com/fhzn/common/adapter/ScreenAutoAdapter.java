@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 
 /**
- * 应用模块:base
+ * 应用模块:common
  * <p>
  * 类描述: 屏幕适配 1.先在application中使用setup()方法初始化一下
  * 2.手动在Activity中调用match()方法做适配，必须在setContentView()之前

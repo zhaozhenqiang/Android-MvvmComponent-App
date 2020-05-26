@@ -18,15 +18,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/dp_10"
-                android:text="登录测试" />
-
-            <TextView
-                android:id="@+id/tv_show"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="@dimen/dp_10"
-                android:text="home data" />
+                android:text="login test" />
 
             <TextView
                 android:id="@+id/tv_add_home_test"
@@ -34,7 +26,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/dp_10"
-                android:text="add data" />
+                android:text="add test" />
+
+            <TextView
+                android:id="@+id/tv_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/dp_10"
+                android:text="add result" />
 
             <TextView
                 android:id="@+id/tv_get_home_data"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="@dimen/dp_10"
-                android:text="get data" />
+                android:text="list test" />
         </LinearLayout>
 
         <com.scwang.smart.refresh.layout.SmartRefreshLayout

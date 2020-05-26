@@ -10,6 +10,7 @@ import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.base.viewmodel.MvmBaseViewModel;
 import com.fhzn.db1.home.sample.bean.AddResponse;
 import com.fhzn.db1.home.sample.bean.SampleBean;
+import com.zhpan.idea.dialog.DialogUtils;
 
 import java.util.ArrayList;
 
@@ -81,7 +82,7 @@ public class SampleViewModel extends MvmBaseViewModel<ISampleView, SampleModel>
     private void parseAdd(String s) {
         AddResponse response = GsonUtils.fromLocalJson(s, AddResponse.class);
         if (response == null || response.getResult() == null) {
-            ToastUtils.showShort("sever err ,data is null");
+            getPageView().onDataAddFinish(null);
         } else {
             getPageView().onDataAddFinish(response.getMessage() + response.getResult().getId());
         }

@@ -22,6 +22,7 @@ import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.common.utils.ToastUtil;
 import com.fhzn.db1.user.bean.LoginResponse;
 import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
+import com.zhpan.idea.dialog.DialogUtils;
 
 import java.util.HashMap;
 
@@ -57,6 +58,8 @@ public class LoginActivity extends AppCompatActivity {
         binding.btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                final DialogUtils dialogUtils = new DialogUtils();
+                dialogUtils.showProgress(LoginActivity.this);
                 HashMap<String, String> map = new HashMap<>();
                 map.put("username", "wangdongfeng");
                 map.put("password", "123456");
@@ -66,12 +69,14 @@ public class LoginActivity extends AppCompatActivity {
                         .execute(new SimpleCallBack<String>() {
                             @Override
                             public void onError(ApiException e) {
+                                dialogUtils.dismissProgress();
                                 LogUtils.e(e.getMessage());
                                 ToastUtil.show(LoginActivity.this, e.getMessage());
                             }
 
                             @Override
                             public void onSuccess(String s) {
+                                dialogUtils.dismissProgress();
                                 parseData(s);
                             }
                         });

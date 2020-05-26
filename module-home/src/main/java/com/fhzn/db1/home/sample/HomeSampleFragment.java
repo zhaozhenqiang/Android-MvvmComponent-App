@@ -1,6 +1,7 @@
 package com.fhzn.db1.home.sample;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ import com.fhzn.db1.home.sample.adapter.SampleAdapter;
 import com.fhzn.db1.home.sample.bean.SampleBean;
 import com.scwang.smart.refresh.footer.ClassicsFooter;
 import com.scwang.smart.refresh.header.ClassicsHeader;
+import com.zhpan.idea.dialog.DialogUtils;
 
 import java.util.ArrayList;
 
@@ -28,7 +30,7 @@ import java.util.ArrayList;
 @Route(path = RouterFragmentPath.Home.PAGER_HOME_SAMPLE)
 public class HomeSampleFragment extends MvvmBaseFragment<HomeFragmentSampleBinding, SampleViewModel> implements ISampleView {
     SampleAdapter mAdapter;
-
+    final DialogUtils mDialog = new DialogUtils();
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -36,6 +38,7 @@ public class HomeSampleFragment extends MvvmBaseFragment<HomeFragmentSampleBindi
         viewDataBinding.tvAddHomeTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mDialog.showProgress(getContext());
                 addDate();
             }
         });
@@ -117,7 +120,12 @@ public class HomeSampleFragment extends MvvmBaseFragment<HomeFragmentSampleBindi
 
     @Override
     public void onDataAddFinish(String message) {
-        viewDataBinding.tvShow.setText(message);
+        mDialog.dismissProgress();
+        if(TextUtils.isEmpty(message)) {
+            viewDataBinding.tvShow.setText("error");
+        } else {
+            viewDataBinding.tvShow.setText(message);
+        }
     }
 
     @Override

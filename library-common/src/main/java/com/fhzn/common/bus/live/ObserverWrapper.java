@@ -1,4 +1,4 @@
-package com.fhzn.common.bus;
+package com.fhzn.common.bus.live;
 
 import androidx.lifecycle.Observer;
 
