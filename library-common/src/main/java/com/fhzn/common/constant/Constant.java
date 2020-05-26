@@ -21,6 +21,13 @@ public class Constant {
     public static int IL_LOADING_RES = ILoader.Options.RES_NONE;
     public static int IL_ERROR_RES = ILoader.Options.RES_NONE;
 
-    // #dev model
-    public static boolean DEV = true;
+    // #debug model
+    public static boolean DEBUG = true;
+
+    // #user first use
+    public static String FLAG_FIRST = "FLAG_FIRST";
+    public static String USER_TOKEN = "USER_TOKEN";
+
+    // #default design size
+    public static float DEFAULT_SIZE = 375.0f;
 }

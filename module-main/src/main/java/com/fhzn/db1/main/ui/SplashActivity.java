@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
+import com.fhzn.common.constant.Constant;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.storage.MmkvHelper;
 import com.fhzn.db1.main.R;
@@ -31,7 +32,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ScreenAutoAdapter.match(this, 375.0f);
+        ScreenAutoAdapter.match(this, Constant.DEFAULT_SIZE);
         setContentView(R.layout.main_activity_splash);
         ImmersionBar.with(this)
                 .titleBar(findViewById(R.id.top_view))
@@ -41,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void startToMain() {
-        if (MmkvHelper.getInstance().getMmkv().decodeBool("first", true)) {
+        if (MmkvHelper.getInstance().getMmkv().decodeBool(Constant.FLAG_FIRST, true)) {
             //startActivity(new Intent(this, GuideActivity.class));
             ARouter.getInstance().build(RouterActivityPath.Main.PAGER_MAIN).navigation();
         } else {

@@ -13,6 +13,7 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.ColorUtils;
 import com.fhzn.common.base.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
+import com.fhzn.common.constant.Constant;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.common.storage.MmkvHelper;
@@ -27,6 +28,8 @@ import java.util.List;
 
 import me.majiajie.pagerbottomtabstrip.NavigationController;
 
+import static com.fhzn.common.constant.Constant.FLAG_FIRST;
+
 /**
  * app 主页面
  *
@@ -34,8 +37,7 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
  */
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)
-public class MainActivity
-        extends MvvmBaseActivity<MainActivityMainBinding, IMvvmBaseViewModel> {
+public class MainActivity extends MvvmBaseActivity<MainActivityMainBinding, IMvvmBaseViewModel> {
 
     private List<Fragment> fragments;
 
@@ -50,13 +52,13 @@ public class MainActivity
 
 
     public static void start(Context context) {
-        MmkvHelper.getInstance().getMmkv().encode("first", false);
+        MmkvHelper.getInstance().getMmkv().encode(FLAG_FIRST, false);
         context.startActivity(new Intent(context, MainActivity.class));
     }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        ScreenAutoAdapter.match(this, 375.0f);
+        ScreenAutoAdapter.match(this, Constant.DEFAULT_SIZE);
         super.onCreate(savedInstanceState);
         ImmersionBar.with(this)
                 .statusBarColor(R.color.main_color_bar)
