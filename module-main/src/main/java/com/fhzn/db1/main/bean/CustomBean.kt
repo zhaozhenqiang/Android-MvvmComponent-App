@@ -6,7 +6,7 @@ package com.fhzn.db1.main.bean
  * 类描述:
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-28
  */
 class CustomBean {

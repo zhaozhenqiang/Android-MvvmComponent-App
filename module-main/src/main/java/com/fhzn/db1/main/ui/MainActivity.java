@@ -11,12 +11,12 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.ColorUtils;
-import com.fhzn.common.activity.MvvmBaseActivity;
+import com.fhzn.common.base.activity.MvvmBaseActivity;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.common.storage.MmkvHelper;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.base.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.main.R;
 import com.fhzn.db1.main.adapter.MainPageAdapter;
 import com.fhzn.db1.main.databinding.MainActivityMainBinding;
@@ -30,7 +30,7 @@ import me.majiajie.pagerbottomtabstrip.NavigationController;
 /**
  * app 主页面
  *
- * @author darryrzhoong
+ * @author jerry
  */
 
 @Route(path = RouterActivityPath.Main.PAGER_MAIN)

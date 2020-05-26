@@ -8,7 +8,7 @@ import com.fhzn.common.base.BaseApplication;
  * 类描述: 动态配置组件Application,有需要初始化的组件实现该接口,统一在宿主app 的Application进行初始化
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-25
  */
 public interface IModuleInit

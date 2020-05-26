@@ -1,10 +1,10 @@
 package com.fhzn.db1.home.sample;
 
 import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.common.model.BasePagingModel;
-import com.fhzn.common.net.EasyHttp;
-import com.fhzn.common.net.callback.SimpleCallBack;
-import com.fhzn.common.net.exception.ApiException;
+import com.fhzn.common.base.model.BasePagingModel;
+import com.fhzn.common.http.EasyHttp;
+import com.fhzn.common.http.callback.SimpleCallBack;
+import com.fhzn.common.http.exception.ApiException;
 import com.fhzn.common.utils.GsonUtils;
 import com.fhzn.db1.home.sample.bean.SampleBean;
 import com.fhzn.db1.home.sample.bean.SampleWrapper;
@@ -20,7 +20,7 @@ import io.reactivex.disposables.Disposable;
  * 类描述: 数据处理层
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-14
  */
 public class SampleModel<T> extends BasePagingModel<T> {

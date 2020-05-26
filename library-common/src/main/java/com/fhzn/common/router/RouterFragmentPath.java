@@ -6,7 +6,7 @@ package com.fhzn.common.router;
  * 类描述: 用于组件化开发中,ARouter Fragment路径统一注册, 注册的路径请写好注释、标注业务功能
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-25
  */
 public class RouterFragmentPath

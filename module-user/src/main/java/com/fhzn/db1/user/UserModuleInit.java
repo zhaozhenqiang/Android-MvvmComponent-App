@@ -9,7 +9,7 @@ import com.fhzn.common.base.BaseApplication;
  * 类描述:
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-29
  */
 public class UserModuleInit implements IModuleInit {

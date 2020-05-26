@@ -2,12 +2,12 @@ package com.fhzn.db1.home.sample;
 
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.ToastUtils;
-import com.fhzn.common.model.BasePagingModel;
-import com.fhzn.common.model.IPagingModelListener;
-import com.fhzn.common.net.callback.SimpleCallBack;
-import com.fhzn.common.net.exception.ApiException;
+import com.fhzn.common.base.model.BasePagingModel;
+import com.fhzn.common.base.model.IPagingModelListener;
+import com.fhzn.common.http.callback.SimpleCallBack;
+import com.fhzn.common.http.exception.ApiException;
 import com.fhzn.common.utils.GsonUtils;
-import com.fhzn.common.viewmodel.MvmBaseViewModel;
+import com.fhzn.common.base.viewmodel.MvmBaseViewModel;
 import com.fhzn.db1.home.sample.bean.AddResponse;
 import com.fhzn.db1.home.sample.bean.SampleBean;
 
@@ -19,7 +19,7 @@ import java.util.ArrayList;
  * 类描述:  model 与 ui 控制层
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-14
  */
 public class SampleViewModel extends MvmBaseViewModel<ISampleView, SampleModel>

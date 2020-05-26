@@ -9,7 +9,7 @@ import com.fhzn.common.contract.UserInfo;
  * 类描述: app登陆相关信息
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-01-27
  */
 public interface ILoginService extends IProvider {

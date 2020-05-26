@@ -21,7 +21,7 @@ import com.gyf.immersionbar.ImmersionBar;
  * 类描述: 欢迎页面
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-26
  */
 public class SplashActivity extends AppCompatActivity {

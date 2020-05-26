@@ -11,9 +11,9 @@ import com.alibaba.android.arouter.facade.annotation.Autowired;
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.blankj.utilcode.util.LogUtils;
-import com.fhzn.common.net.EasyHttp;
-import com.fhzn.common.net.callback.SimpleCallBack;
-import com.fhzn.common.net.exception.ApiException;
+import com.fhzn.common.http.EasyHttp;
+import com.fhzn.common.http.callback.SimpleCallBack;
+import com.fhzn.common.http.exception.ApiException;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.services.ILoginService;
 import com.fhzn.common.services.config.ServicesConfig;
@@ -28,7 +28,7 @@ import java.util.HashMap;
 import io.reactivex.disposables.Disposable;
 
 /**
- * @author darryrzhoong
+ * @author jerry
  */
 @Route(path = RouterActivityPath.User.PAGER_LOGIN)
 public class LoginActivity extends AppCompatActivity {

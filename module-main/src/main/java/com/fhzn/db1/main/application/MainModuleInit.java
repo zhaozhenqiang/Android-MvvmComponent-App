@@ -4,13 +4,13 @@ import com.blankj.utilcode.util.Utils;
 import com.fhzn.common.IModuleInit;
 import com.fhzn.common.adapter.ScreenAutoAdapter;
 import com.fhzn.common.base.BaseApplication;
-import com.fhzn.common.loadsir.EmptyCallback;
-import com.fhzn.common.loadsir.ErrorCallback;
-import com.fhzn.common.loadsir.LoadingCallback;
-import com.fhzn.common.loadsir.TimeoutCallback;
-import com.fhzn.common.net.EasyHttp;
-import com.fhzn.common.net.cache.converter.GsonDiskConverter;
-import com.fhzn.common.net.cache.model.CacheMode;
+import com.fhzn.common.base.loadsir.EmptyCallback;
+import com.fhzn.common.base.loadsir.ErrorCallback;
+import com.fhzn.common.base.loadsir.LoadingCallback;
+import com.fhzn.common.base.loadsir.TimeoutCallback;
+import com.fhzn.common.http.EasyHttp;
+import com.fhzn.common.http.cache.converter.GsonDiskConverter;
+import com.fhzn.common.http.cache.model.CacheMode;
 import com.kingja.loadsir.core.LoadSir;
 import com.orhanobut.logger.Logger;
 
@@ -20,7 +20,7 @@ import com.orhanobut.logger.Logger;
  * 类描述: main组件的业务初始化
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-26
  */
 public class MainModuleInit implements IModuleInit {

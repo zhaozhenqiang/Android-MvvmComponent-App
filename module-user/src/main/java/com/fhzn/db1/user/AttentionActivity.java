@@ -5,9 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.fhzn.common.activity.MvvmBaseActivity;
+import com.fhzn.common.base.activity.MvvmBaseActivity;
 import com.fhzn.common.router.RouterActivityPath;
-import com.fhzn.common.viewmodel.IMvvmBaseViewModel;
+import com.fhzn.common.base.viewmodel.IMvvmBaseViewModel;
 import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
 
 /**
@@ -16,7 +16,7 @@ import com.fhzn.db1.user.databinding.UserActivityLoginBinding;
  * 类描述: 关注页面
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-29
  */
 @Route(path = RouterActivityPath.User.PAGER_ATTENTION)

@@ -6,7 +6,7 @@ package com.fhzn.common.services.config;
  * 类描述: 各个组件需要暴露给外部的service名称 配置
  * <p>
  *
- * @author darryrzhoong
+ * @author jerry
  * @since 2020-02-29
  */
 public class ServicesConfig {

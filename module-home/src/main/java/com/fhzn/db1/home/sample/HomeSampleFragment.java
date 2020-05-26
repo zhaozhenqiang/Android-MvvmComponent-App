@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.fhzn.common.fragment.MvvmBaseFragment;
+import com.fhzn.common.base.fragment.MvvmBaseFragment;
 import com.fhzn.common.router.RouterActivityPath;
 import com.fhzn.common.router.RouterFragmentPath;
 import com.fhzn.db1.home.R;
